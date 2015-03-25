@@ -80,20 +80,22 @@ help::
 clean::
 	rm -rf MAKE.LOG *.o *.exe *.ii *.ti *~
 	rm -rf $(CPPPROGS) $(OUTPROGS)
-	@for DATEI in *.ctt; \
-	do \
-	    BASE=`basename $$DATEI .ctt`; \
-	    if test -r $$BASE.cpp; \
-	    then \
-	        echo " remove $$BASE.cpp"; \
-		rm $$BASE.cpp; \
-	    fi; \
-	    if test -x $$BASE; \
-            then \
-                echo " remove $$BASE"; \
-                rm $$BASE; \
-            fi; \
-	done
+
+#	@for DATEI in *.ctt; \
+#	do \
+#	    BASE=`basename $$DATEI .ctt`; \
+#	    if test -r $$BASE.cpp; \
+#	    then \
+#	        echo " remove $$BASE.cpp"; \
+#		rm $$BASE.cpp; \
+#	    fi; \
+#	    if test -x $$BASE; \
+#            then \
+#                echo " remove $$BASE"; \
+#                rm $$BASE; \
+#            fi; \
+#	done
+
 	@for DATEI in *.cpp; \
 	do \
 	    BASE=`basename $$DATEI .cpp`; \
@@ -103,13 +105,14 @@ clean::
                 rm $$BASE; \
             fi; \
 	done
-	@for DATEI in *.htt; \
-	do \
-            BASE=`basename $$DATEI .htt`; \
-            if test -r $$BASE.hpp; \
-            then \
-                echo " remove $$BASE.hpp"; \
-                rm $$BASE.hpp; \
-            fi; \
-	done
+
+#	@for DATEI in *.htt; \
+#	do \
+#            BASE=`basename $$DATEI .htt`; \
+#            if test -r $$BASE.hpp; \
+#            then \
+#                echo " remove $$BASE.hpp"; \
+#                rm $$BASE.hpp; \
+#            fi; \
+#	done
 
