@@ -7,7 +7,7 @@
 ############################
 # GCC settings (general)
 ############################
-GCCFLAGS=-g -ansi -W -Wall -Wwrite-strings -pedantic -std=c++11
+GCCFLAGS=-g3 --gdwarf-2 -ansi -W -Wall -Wwrite-strings -pedantic -std=c++11
 CXX = g++
 CXXFLAGS = $(GCCFLAGS)
 LDFLAGS = -lm -lrt -lpthread
